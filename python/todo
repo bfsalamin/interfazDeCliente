@@ -1,6 +1,11 @@
 
 [X] get info from api
 [ ] modify info
+ [X] create aspirante
+ [ ] populate aspirante
+ [ ] fill None with json-friendly defaults
+ [ ] turn aspirante into json
+ [ ] push json to web api
 [ ] push modifications
 [X] query narrowing
 
