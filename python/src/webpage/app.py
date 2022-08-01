@@ -10,7 +10,7 @@ def to_list(dlist):
   return [sorted(dlist[0].keys()), [sorted(i.items()) for i in dlist]]
  return []
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST', 'DELETE'])
 def client_database():
 
  result = []
@@ -29,6 +29,12 @@ def client_database():
    new_aspirant = {k:v for k,v in zip(aspi.requerido, request.form.getlist('fields[]'))}
    print(new_aspirant)
    localDatabase.clientes.post(queryWebsite.Aspirante(new_aspirant).get_post())
+ if request.method == 'DELETE':
+  if request.form['query'] == 'delete':
+   print("\t borrar")
+   ceda = request.form['borrar']
+   localDatabase.clientes.delete(ceda)
+  
  made = render_template('clientes.html', clientes=to_list(localDatabase.clientes.get_all()), seleccion=to_list(result), aspirantefields=aspi.requerido)
  return made
 
