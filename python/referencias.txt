@@ -1,0 +1,10 @@
+https://realpython.com/urllib-request/#post-requests-with-urllibrequest
+https://docs.python.org/3/library/json.html
+https://docs.python.org/3/library/urllib.request.html
+https://docs.python.org/3/library/urllib.request.html#urllib.request.Request
+https://docs.python.org/3/library/urllib.parse.html?highlight=urllib%20parse#module-urllib.parse
+https://stackoverflow.com/questions/36484184/python-make-a-post-request-using-python-3-urllib
+https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects
+https://tinydb.readthedocs.io/en/latest/getting-started.html#basic-usage
+https://tinydb.readthedocs.io/en/latest/usage.html#queries
+https://tinydb.readthedocs.io/en/latest/api.html#module-tinydb.storages

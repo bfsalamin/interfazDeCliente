@@ -1,15 +1,36 @@
 
+X task complete
+! unresolved problems on task
+Y Subtasks with problems
+
 [X] get info from api
-[ ] modify info
+
+[Y] modify info
  [X] create aspirante
- [ ] populate aspirante
- [ ] fill None with json-friendly defaults
- [ ] turn aspirante into json
- [ ] push json to web api
-[ ] push modifications
+ [X] populate aspirante
+ [X] fill None with json-friendly defaults
+ [X] turn aspirante into json
+ [!] push json to web api
+
+[!] push modifications
+[ ] new - local database
+? recreate api locally
+? just clone json from remote and store locally as tinydb, then only interact with tinydb
+ [X] create a local tinydb
+ [X] populate tinydb with remote db
+ [X] query to local tinydb
+ [X] post to local tinydb
+ [X] delete from local tinydb
+
 [X] query narrowing
 
 [ ] web interface
+ [ ] print raw json
+ [ ] format json into a table
+ [ ] refresh button
+ [ ] enter demo input
+ [ ] enter query
+
 [ ] show changes
 [ ] show information
 [ ] pretty print info
