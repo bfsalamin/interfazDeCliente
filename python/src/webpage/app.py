@@ -5,36 +5,30 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+def to_list(dlist):
+ if dlist:
+  return [sorted(dlist[0].keys()), [sorted(i.items()) for i in dlist]]
+ return []
+
 @app.route("/", methods=['GET', 'POST'])
 def client_database():
- todo = [list(i.items()) for i in localDatabase.clientes.get_all()]
- made = render_template('clientes.html', clientes=todo)
+
+ result = []
+ aspi = queryWebsite.Aspirante()
 
  if request.method == 'POST':
-  if request.form.get('query'):
-   key, val =request.form['query'].split()
+  if request.form['query'] == 'search':
+   key, val = request.form['key'], request.form['val']
    localDatabase.clientes.add_query_field(key, val)
    result = localDatabase.clientes.get_search()
+   #if type(result) is dict:
+    #result = [result]
    localDatabase.clientes.delete_queries()
-   print(result, localDatabase.clientes.qry, localDatabase.clientes.database.all(), type(key), val)
+  #fields in a form get identified by their name, not their id.
+  if request.form['query'] == 'submit':
+   new_aspirant = {k:v for k,v in zip(aspi.requerido, request.form.getlist('fields[]'))}
+   print(new_aspirant)
+   localDatabase.clientes.post(queryWebsite.Aspirante(new_aspirant).get_post())
+ made = render_template('clientes.html', clientes=to_list(localDatabase.clientes.get_all()), seleccion=to_list(result), aspirantefields=aspi.requerido)
+ return made
 
- return made + str(result)
-
-
-
-
-
-@app.route("/btn", methods=['GET', 'POST'])
-def boton():
- if request.method == 'POST':
-  if request.form.get('action1') == 'VALUE1':
-   print("boton 1")
-  elif request.form.get('action2') == 'VALUE2':
-   print("boton 2")
-  elif request.form.get('texto'):
-   print(request.form['texto'])
-  else:
-   print("nose")
- elif request.method == 'GET':
-  return render_template('botones.html')
- return render_template('botones.html')

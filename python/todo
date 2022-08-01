@@ -32,11 +32,14 @@ Y Subtasks with problems
  [X] press demo button
  [ ] refresh button
  [X] enter query
-  [ ] parse query
-  [ ] execute query
-  [ ] show query result
+  [X] parse query
+  [X] execute query
+  [X] show query result
  [ ] delete user by cedula
- [ ] post user
+ [X] post user
+  [X] capture data from html form
+  [X] pass data into db
+  [X] update html
 [ ] looking good
  [ ] pretty table
  [ ] default table column order

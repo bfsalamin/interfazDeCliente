@@ -3,23 +3,50 @@
 
 <title>Grupo Advicers</title>
 
-<p>Clientes</p>
+{% if seleccion %}
+<p>Seleccionados</p>
+<table>
+
+<TR>
+{% for selen in seleccion[0] %}
+ <TD>{{selen}}</TD>
+{% endfor %}
+</TR>
+
+{% for selen in seleccion[1] %}
+<TR>
+ {% for i in selen %}
+ <TD>{{i[1]}}</TD>
+ {% endfor %}
+</TR>
+{% endfor %}
+
+</table>
+
+{% endif %}
+
+<p></p>
+
 
 <form method="post">
-<label for="query">Query</label><br>
-<input type="text" id="query" name="query"><br>
+<label for="query">field value</label><br>
+<input type="text" id="key" name="key" placeholder="edad"><br>
+<input type="text" id="val" name="val" placeholder="24"><br>
+<input type="hidden" name="query" value="search">
+<button type="submit" >Search</button>
 </form>
 <p></p>
 
+<p>Clientes</p>
 <table>
 
 <TR>
 {% for client in clientes[0] %}
- <TD>{{client[0]}}</TD>
+ <TD>{{client}}</TD>
 {% endfor %}
 </TR>
 
-{% for client in clientes %}
+{% for client in clientes[1] %}
 <TR>
  {% for i in client %}
  <TD>{{i[1]}}</TD>
@@ -28,3 +55,11 @@
 {% endfor %}
 
 </table>
+
+<p>Aspirante</p>
+<form method="post" >
+{% for i in aspirantefields %}
+<input type="text" id="fields" name="fields[]" placeholder={{i}}><br>
+{% endfor %}
+<input type="hidden" name="query" value="submit">
+<button type="submit" >Create</button>
