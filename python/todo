@@ -2,6 +2,7 @@
 X task complete
 ! unresolved problems on task
 Y Subtasks with problems
+? listing options
 
 [X] get info from api
 
@@ -24,12 +25,23 @@ Y Subtasks with problems
 
 [X] query narrowing
 
-[ ] web interface
- [ ] print raw json
- [ ] format json into a table
+[X] web interface
+ [X] print raw json
+ [X] format json into a table
+ [X] enter demo input
+ [X] press demo button
  [ ] refresh button
- [ ] enter demo input
- [ ] enter query
+ [X] enter query
+  [ ] parse query
+  [ ] execute query
+  [ ] show query result
+ [ ] delete user by cedula
+ [ ] post user
+[ ] looking good
+ [ ] pretty table
+ [ ] default table column order
+
+[ ] reformat python code for 4 spaces
 
 [ ] show changes
 [ ] show information

@@ -1,0 +1,30 @@
+
+<!doctype html>
+
+<title>Grupo Advicers</title>
+
+<p>Clientes</p>
+
+<form method="post">
+<label for="query">Query</label><br>
+<input type="text" id="query" name="query"><br>
+</form>
+<p></p>
+
+<table>
+
+<TR>
+{% for client in clientes[0] %}
+ <TD>{{client[0]}}</TD>
+{% endfor %}
+</TR>
+
+{% for client in clientes %}
+<TR>
+ {% for i in client %}
+ <TD>{{i[1]}}</TD>
+ {% endfor %}
+</TR>
+{% endfor %}
+
+</table>

@@ -8,3 +8,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects
 https://tinydb.readthedocs.io/en/latest/getting-started.html#basic-usage
 https://tinydb.readthedocs.io/en/latest/usage.html#queries
 https://tinydb.readthedocs.io/en/latest/api.html#module-tinydb.storages
+https://stackoverflow.com/questions/34584426/nested-for-loop-in-jinja2
+https://stackoverflow.com/questions/9198334/how-to-build-up-a-html-table-with-a-simple-for-loop-in-jinja2
+https://stackoverflow.com/questions/7505988/importing-from-a-relative-path-in-python
+https://www.codegrepper.com/code-examples/python/serving+index.html+file+in+flask
+https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
+https://predictivehacks.com/?all-tips=how-to-add-action-buttons-in-flask

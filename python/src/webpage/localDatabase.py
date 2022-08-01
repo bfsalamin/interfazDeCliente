@@ -45,4 +45,4 @@ class BaseDB():
 #PG testing
 
 clientes = BaseDB(db, queryWebsite.Aspirante().requerido)
-clientes.add_query_field('cedula', '3-761-2397')
+#clientes.add_query_field('cedula', '3-761-2397')
